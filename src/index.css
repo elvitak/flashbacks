@@ -1,13 +1,33 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button {
+  margin: 15px;
+  float: right;
+}
+
+h1 {
+  white-space: nowrap; /* To stay in 1 line */
+  clear: both; /* To avoid messing up boundries with button */
+}
+
+ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+#btnSignIn {
+  width: 50vw;
+  height: 50vh;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+@media (max-width: 100px) {
 }

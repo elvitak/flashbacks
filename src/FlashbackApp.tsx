@@ -9,10 +9,6 @@ type FlashbacksAppState = {
 };
 
 export class FlashbacksApp extends React.Component<{}, FlashbacksAppState> {
-  // 1. datums
-  // 2. doc nolasīšanu
-  // 3. doc transformēšanu uz InputData
-  // 4. izfiltrēšanu pēc datuma
   state = {
     date: new Date().toLocaleString("lv", {
       day: "numeric",

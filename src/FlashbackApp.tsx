@@ -1,6 +1,8 @@
 import React from "react";
 import { InputData, readGoogleDoc } from "./gdoc";
 
+const documentId = process.env.REACT_APP_DOCUMENT_ID!;
+
 type FlashbacksAppState = {
   date: string;
   data?: InputData[];
@@ -20,11 +22,14 @@ export class FlashbacksApp extends React.Component<{}, FlashbacksAppState> {
   };
 
   componentDidMount() {
-    const gdocDataPromise = readGoogleDoc();
+    const gdocDataPromise = readGoogleDoc(documentId);
     gdocDataPromise
-      .then((gdocData) =>
-        gdocData.filter((data) => data.date === this.state.date)
-      )
+      .then((gdocData) => {
+        console.log(gdocData);
+        const a = gdocData.filter((data) => data.date === this.state.date);
+        console.log(a);
+        return a;
+      })
       .then((todayData) => this.setState({ ...this.state, data: todayData }));
   }
 
